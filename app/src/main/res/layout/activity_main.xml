@@ -15,7 +15,7 @@ android:scrollbarStyle="insideInset"
     tools:context=".MainActivity">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/imageButtonSettings"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:adjustViewBounds="true"
@@ -226,7 +226,7 @@ android:scrollbarStyle="insideInset"
         app:layout_constraintGuide_percent="0.26" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/datiTempoReale"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/home_collegamento"
@@ -295,7 +295,7 @@ android:scrollbarStyle="insideInset"
         app:layout_constraintTop_toTopOf="@+id/guideline57" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/startRecord"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/home_collegamento"

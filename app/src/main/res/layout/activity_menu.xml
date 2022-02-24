@@ -274,7 +274,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="359dp" />
+            app:layout_constraintGuide_percent="0.4892221" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline34"
@@ -295,7 +295,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="578dp" />
+            app:layout_constraintGuide_percent="0.5417057" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline38"
@@ -347,7 +347,7 @@
             app:layout_constraintGuide_begin="462dp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/EDtelefonoCell"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:backgroundTint="@color/black"
@@ -365,7 +365,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName7"
+            android:id="@+id/EDtelefonoRis"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:backgroundTint="@color/black"
@@ -383,7 +383,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/EDnome"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:backgroundTint="@color/black"
@@ -401,7 +401,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName4"
+            android:id="@+id/EDcognome"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:backgroundTint="@android:color/black"
@@ -419,7 +419,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName5"
+            android:id="@+id/EDcodiceFiscale"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:backgroundTint="@color/black"
@@ -437,7 +437,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName6"
+            android:id="@+id/EDcodDisp"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:backgroundTint="@android:color/black"
@@ -475,7 +475,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="570dp" />
+            app:layout_constraintGuide_percent="0.53420806" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline17"
@@ -642,7 +642,7 @@
             app:srcCompat="@drawable/ic_baseline_edit_24" />
 
         <ImageView
-            android:id="@+id/mod"
+            android:id="@+id/btnMod2"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:elevation="3dp"
@@ -654,7 +654,7 @@
             app:srcCompat="@drawable/ic_baseline_edit_24" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnMod1"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:backgroundTint="@android:color/white"
@@ -676,7 +676,7 @@
             app:layout_constraintTop_toTopOf="@+id/guideline33" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btnMod3"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:backgroundTint="@android:color/white"
@@ -687,7 +687,7 @@
             app:layout_constraintTop_toTopOf="@+id/guideline36" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btnMod4"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:backgroundTint="@android:color/white"
@@ -698,7 +698,7 @@
             app:layout_constraintTop_toTopOf="@+id/guideline37" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btnMod6"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:backgroundTint="@android:color/white"
@@ -709,7 +709,7 @@
             app:layout_constraintTop_toTopOf="@+id/guideline41" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/btnMod5"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:backgroundTint="@android:color/white"
