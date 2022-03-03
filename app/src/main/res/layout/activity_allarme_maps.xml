@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    card_view:cardElevation="0dp"
+    card_view:cardPreventCornerOverlap="false"
     android:background="@drawable/sfondo_app">
 
 
@@ -48,8 +51,8 @@
         app:layout_constraintTop_toTopOf="@+id/guideline69"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/button14"
+    <TextView
+        android:id="@+id/tempoTrascorso"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/home_collegamento"
@@ -110,13 +113,14 @@
         android:maxWidth="30dp"
         android:maxHeight="30dp"
         android:scaleType="fitCenter"
+        android:src="@drawable/logo_sr"
         app:layout_constraintBottom_toTopOf="@+id/guideline91"
         app:layout_constraintEnd_toStartOf="@+id/guideline83"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline90"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/logo_sr" />
+        />
     <TextView
         android:id="@+id/titoloSafeRide4"
         android:layout_width="0dp"
@@ -136,16 +140,21 @@
         app:layout_constraintTop_toTopOf="@+id/guideline87" />
 
 
-
-
-    <FrameLayout
+    <androidx.cardview.widget.CardView
         android:id="@+id/map_container"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginLeft="0sp"
+        android:layout_marginTop="0sp"
+        android:layout_marginRight="0sp"
+        android:layout_marginBottom="0sp"
+        app:cardCornerRadius="20sp"
+        app:cardElevation="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline46"
         app:layout_constraintEnd_toStartOf="@+id/guideline93"
         app:layout_constraintStart_toStartOf="@+id/guideline89"
         app:layout_constraintTop_toTopOf="@+id/guideline63"
+        card_view:cardBackgroundColor="@android:color/transparent"
         tools:ignore="MissingConstraints">
 
 
@@ -155,8 +164,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
-            android:src="@drawable/riquadro_mappa"
-            app:cardCornerRadius="12dp"
+
+
             app:layout_constraintBottom_toTopOf="@+id/guideline46"
             app:layout_constraintEnd_toStartOf="@+id/guideline62"
             app:layout_constraintHorizontal_bias="0.0"
@@ -168,10 +177,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/riquadro_mappa"
             android:orientation="vertical"></LinearLayout>
 
-    </FrameLayout>
+    </androidx.cardview.widget.CardView>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline81"
@@ -209,6 +217,13 @@
         app:layout_constraintGuide_percent="0.19" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline79"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.21" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline85"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -241,7 +256,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.04" />
+        app:layout_constraintGuide_percent="0.07" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline90"
@@ -286,7 +301,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.64" />
+        app:layout_constraintGuide_percent="0.61" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline76"
@@ -307,14 +322,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.14" />
+        app:layout_constraintGuide_percent="0.15" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline49"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.11" />
+        app:layout_constraintGuide_percent="0.13" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline62"
@@ -328,34 +343,51 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.96" />
+        app:layout_constraintGuide_percent="0.93" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/campanellaAlarm"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:elevation="10dp"
+        android:src="@drawable/ic_baseline_notification_important_24"
+        android:tint="#0016E2"
         app:layout_constraintBottom_toTopOf="@+id/guideline70"
         app:layout_constraintEnd_toStartOf="@+id/guideline72"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline84"
         app:layout_constraintTop_toTopOf="@+id/guideline69"
         app:layout_constraintVertical_bias="1.0"
-        android:src="@drawable/ic_baseline_notification_important_24"
         app:tint="#0016E2" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageView5"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:elevation="10dp"
+        android:src="@drawable/ic_baseline_timer_24"
+        android:tint="#0016E2"
+        app:layout_constraintBottom_toTopOf="@+id/guideline76"
+        app:layout_constraintEnd_toStartOf="@+id/guideline79"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline49"
+        app:layout_constraintTop_toTopOf="@+id/guideline77"
+        app:layout_constraintVertical_bias="1.0"
+        app:tint="#0016E2" />
+
+    <ImageView
+        android:id="@+id/stopSimbolo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        android:src="@drawable/ic_baseline_cancel_24"
+        android:tint="#0016E2"
         app:layout_constraintBottom_toTopOf="@+id/guideline75"
         app:layout_constraintEnd_toStartOf="@+id/guideline72"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline84"
         app:layout_constraintTop_toTopOf="@+id/guideline74"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_baseline_cancel_24"
         app:tint="#0016E2" />
 
     <TextView
@@ -372,15 +404,15 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline73"
         app:layout_constraintEnd_toStartOf="@+id/guideline62"
         app:layout_constraintStart_toStartOf="@+id/guideline49"
-        app:layout_constraintTop_toTopOf="@+id/button14" />
+        app:layout_constraintTop_toTopOf="@+id/tempoTrascorso" />
 
-    <TextView
-        android:id="@+id/textView18"
+    <Chronometer
+        android:id="@+id/cronometroTempo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:elevation="5dp"
         android:paddingTop="3dp"
-        android:text="00h : 10m : 25s"
+
         android:textAlignment="center"
         android:textColor="#0016E2"
         android:textSize="27dp"
@@ -389,4 +421,15 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline62"
         app:layout_constraintStart_toStartOf="@+id/guideline49"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:background="@android:color/white"
+        android:elevation="-1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/map_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/map_container" />
 </androidx.constraintlayout.widget.ConstraintLayout>

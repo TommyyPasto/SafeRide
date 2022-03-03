@@ -239,14 +239,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="405dp" />
+            app:layout_constraintGuide_percent="0.37956887" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline45"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="398.5dp" />
+            app:layout_constraintGuide_percent="0.37300843" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline44"
@@ -267,14 +267,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="352dp" />
+            app:layout_constraintGuide_percent="0.3298969" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline78"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="359dp" />
+            app:layout_constraintGuide_percent="0.33645737" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline80"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.334" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline33"
@@ -288,10 +295,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="298dp" />
+            app:layout_constraintGuide_percent="0.27928773" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="516dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline92"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -351,7 +365,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="462dp" />
+            app:layout_constraintGuide_percent="0.4329897" />
 
         <EditText
             android:id="@+id/EDtelefonoCell"
@@ -489,7 +503,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="524dp" />
+            app:layout_constraintGuide_percent="0.49109653" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline5"
@@ -538,7 +552,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="250dp" />
+            app:layout_constraintGuide_percent="0.23430178" />
 
         <TextView
             android:id="@+id/textView"
@@ -577,12 +591,12 @@
             app:layout_constraintTop_toTopOf="@+id/guideline26" />
 
         <ImageView
-            android:id="@+id/Mod1"
+            android:id="@+id/mod1"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="4dp"
             android:elevation="4dp"
-            android:tint="@android:color/black"
+            android:tint="@android:color/white"
             app:layout_constraintBottom_toTopOf="@+id/guideline31"
             app:layout_constraintEnd_toStartOf="@+id/guideline28"
             app:layout_constraintStart_toStartOf="@+id/guideline16"
@@ -590,26 +604,15 @@
             app:srcCompat="@drawable/ic_baseline_edit_24" />
 
         <ImageView
-            android:id="@+id/Mod2"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:tint="@android:color/black"
-            app:layout_constraintBottom_toTopOf="@+id/guideline17"
-            app:layout_constraintEnd_toStartOf="@+id/guideline28"
-            app:layout_constraintStart_toStartOf="@+id/guideline16"
-            app:layout_constraintTop_toTopOf="@+id/guideline15"
-            app:srcCompat="@drawable/ic_baseline_edit_24" />
-
-        <ImageView
             android:id="@+id/mod2"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:elevation="3dp"
-            android:tint="@android:color/black"
-            app:layout_constraintBottom_toTopOf="@+id/guideline17"
+            android:tint="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@+id/guideline14"
             app:layout_constraintEnd_toStartOf="@+id/guideline28"
             app:layout_constraintStart_toStartOf="@+id/guideline16"
-            app:layout_constraintTop_toTopOf="@+id/guideline15"
+            app:layout_constraintTop_toTopOf="@+id/guideline32"
             app:srcCompat="@drawable/ic_baseline_edit_24" />
 
         <ImageView
@@ -617,7 +620,19 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:elevation="3dp"
-            android:tint="@android:color/black"
+            android:tint="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@+id/guideline17"
+            app:layout_constraintEnd_toStartOf="@+id/guideline28"
+            app:layout_constraintStart_toStartOf="@+id/guideline16"
+            app:layout_constraintTop_toTopOf="@+id/guideline15"
+            app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+        <ImageView
+            android:id="@+id/mod4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="3dp"
+            android:tint="@android:color/white"
             app:layout_constraintBottom_toTopOf="@+id/guideline20"
             app:layout_constraintEnd_toStartOf="@+id/guideline28"
             app:layout_constraintStart_toStartOf="@+id/guideline16"
@@ -625,23 +640,11 @@
             app:srcCompat="@drawable/ic_baseline_edit_24" />
 
         <ImageView
-            android:id="@+id/mod4"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:elevation="4dp"
-            android:tint="@android:color/black"
-            app:layout_constraintBottom_toTopOf="@+id/guideline5"
-            app:layout_constraintEnd_toStartOf="@+id/guideline28"
-            app:layout_constraintStart_toStartOf="@+id/guideline16"
-            app:layout_constraintTop_toTopOf="@+id/guideline23"
-            app:srcCompat="@drawable/ic_baseline_edit_24" />
-
-        <ImageView
             android:id="@+id/mod5"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:elevation="4dp"
-            android:tint="@android:color/black"
+            android:tint="@android:color/white"
             app:layout_constraintBottom_toTopOf="@+id/guideline22"
             app:layout_constraintEnd_toStartOf="@+id/guideline28"
             app:layout_constraintStart_toStartOf="@+id/guideline16"
@@ -649,22 +652,22 @@
             app:srcCompat="@drawable/ic_baseline_edit_24" />
 
         <ImageView
-            android:id="@+id/imageViewMod2"
+            android:id="@+id/mod6"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:elevation="3dp"
-            android:tint="@android:color/black"
-            app:layout_constraintBottom_toTopOf="@+id/guideline14"
+            android:elevation="4dp"
+            android:tint="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintEnd_toStartOf="@+id/guideline28"
             app:layout_constraintStart_toStartOf="@+id/guideline16"
-            app:layout_constraintTop_toTopOf="@+id/guideline32"
+            app:layout_constraintTop_toTopOf="@+id/guideline23"
             app:srcCompat="@drawable/ic_baseline_edit_24" />
 
         <Button
             android:id="@+id/btnMod1"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:backgroundTint="@android:color/white"
+            android:backgroundTint="#0016E2"
             android:elevation="3dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline34"
             app:layout_constraintEnd_toStartOf="@+id/guideline28"
@@ -675,18 +678,18 @@
             android:id="@+id/btnMod2"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:backgroundTint="@android:color/white"
+            android:backgroundTint="#0016E2"
             android:elevation="3dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline14"
             app:layout_constraintEnd_toStartOf="@+id/guideline28"
             app:layout_constraintStart_toStartOf="@+id/guideline16"
-            app:layout_constraintTop_toTopOf="@+id/guideline78" />
+            app:layout_constraintTop_toTopOf="@+id/guideline80" />
 
         <Button
             android:id="@+id/btnMod3"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:backgroundTint="@android:color/white"
+            android:backgroundTint="#0016E2"
             android:elevation="3dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline35"
             app:layout_constraintEnd_toStartOf="@+id/guideline28"
@@ -697,7 +700,7 @@
             android:id="@+id/btnMod4"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:backgroundTint="@android:color/white"
+            android:backgroundTint="#0016E2"
             android:elevation="3dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline38"
             app:layout_constraintEnd_toStartOf="@+id/guideline28"
@@ -708,7 +711,7 @@
             android:id="@+id/btnMod6"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:backgroundTint="@android:color/white"
+            android:backgroundTint="#0016E2"
             android:elevation="3dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline42"
             app:layout_constraintEnd_toStartOf="@+id/guideline28"
@@ -719,7 +722,7 @@
             android:id="@+id/btnMod5"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:backgroundTint="@android:color/white"
+            android:backgroundTint="#0016E2"
             android:elevation="3dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline39"
             app:layout_constraintEnd_toStartOf="@+id/guideline28"
