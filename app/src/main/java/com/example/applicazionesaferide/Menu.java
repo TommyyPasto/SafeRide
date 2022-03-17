@@ -3,6 +3,7 @@ package com.example.applicazionesaferide;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -12,6 +13,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
 public class Menu extends AppCompatActivity {
 
     boolean modificabile1 = false;
@@ -20,10 +26,16 @@ public class Menu extends AppCompatActivity {
     boolean modificabile4 = false;
     boolean modificabile5 = false;
     boolean modificabile6 = false;
+    Socket s = null;
+    DataOutputStream dout = null;
+
+    SharedPreferences sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_menu);
         Button btnMod1 = findViewById(R.id.btnMod1);
         Button btnMod2 = findViewById(R.id.btnMod2);
@@ -31,6 +43,7 @@ public class Menu extends AppCompatActivity {
         Button btnMod4 = findViewById(R.id.btnMod4);
         Button btnMod5 = findViewById(R.id.btnMod5);
         Button btnMod6 = findViewById(R.id.btnMod6);
+        Button btnSalvaMod = findViewById(R.id.salvaModifiche);
 
         EditText txt1 = findViewById(R.id.EDtelefonoCell);
         EditText txt2 = findViewById(R.id.EDtelefonoRis);
@@ -49,7 +62,66 @@ public class Menu extends AppCompatActivity {
         Drawable edit = getResources().getDrawable(R.drawable.ic_baseline_edit_24);
         Drawable check = getResources().getDrawable(R.drawable.ic_baseline_check_24);
 
+
+        sp = getSharedPreferences("DatiUtenti", Context.MODE_PRIVATE);
+        txt1.setText(sp.getString("telCell",""));
+        txt2.setText(sp.getString("telRis",""));
+        txt3.setText(sp.getString("nome",""));
+        txt4.setText(sp.getString("cognome",""));
+        txt5.setText(sp.getString("cf",""));
+        txt6.setText(sp.getString("cDisp",""));
+
+
+
+
+
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+
+
+
+
+        btnSalvaMod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                SharedPreferences.Editor editor = sp.edit();
+                editor.putString("telCell", txt1.getText().toString());
+                editor.putString("telRis", txt2.getText().toString());
+                editor.putString("nome", txt3.getText().toString());
+                editor.putString("cognome", txt4.getText().toString());
+                editor.putString("cf", txt5.getText().toString());
+                editor.putString("cDisp", txt6.getText().toString());
+                editor.commit();
+
+                Thread thread = new Thread() {
+                    @Override
+                    public void run() {
+
+                        try {
+                            s = new Socket("192.168.4.1", 25200);
+                            String msgDati = txt1.getText().toString() + "," +  txt2.getText().toString() + "," +  txt3.getText().toString() + "," +  txt4.getText().toString() + "," +  txt5.getText().toString() + "," +  txt6.getText().toString();
+                            dout = new DataOutputStream(s.getOutputStream());
+                            dout.writeUTF(msgDati);
+                            dout.flush();
+                            dout.close();
+                            s.close();
+                        } catch (IOException e) {
+                            //e.printStackTrace();
+                        }
+
+                    }
+                };
+
+                try {
+                    thread.start();
+                }catch(Exception ex){
+
+                }
+
+            }
+        });
+
+
 
 
 
